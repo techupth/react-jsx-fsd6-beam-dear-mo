@@ -1,6 +1,6 @@
 import "./App.css";
 
-function GetCurrentDateTime() {
+function getCurrentDateTime() {
   const now = new Date();
   const year = now.getFullYear();
   const month = String(now.getMonth() + 1).padStart(2, "0");
@@ -19,13 +19,13 @@ function IntroSection() {
     link: "article-link",
   };
   return (
-    <div className="article">
-      <h3 className="article-title">TechUp Thailand</h3>
-      <p className="article-body">
+    <div className={articleStyles.container}>
+      <h3 className={articleStyles.title}>TechUp Thailand</h3>
+      <p className={articleStyles.body}>
         เตรียมพบกับหลักสูตรปั้นคุณเป็น Software Developer ภายใน 4 เดือน
       </p>
       <a
-        className="article-link"
+        className={articleStyles.link}
         href="https://www.techupth.com/"
         target="blank"
       >
@@ -33,7 +33,7 @@ function IntroSection() {
       </a>
       {/* ให้แสดงวันเวลาด้วย Function `getCurrentDateTime` ที่กำหนดไว้ให้ */}
       <div className="bootcamp-start-time">
-        วันเวลาเริ่มหลักสูตร คือ {GetCurrentDateTime()}
+        วันเวลาเริ่มหลักสูตร คือ {getCurrentDateTime()}
       </div>
     </div>
   );
